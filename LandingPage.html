@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <style>
+        #nav-bar {
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+            position: fixed; /* Similar to how the background was fixed and the flexbox could move in the Survey Form, this makes it so that the id="nav-bar" is fixed, but the background can move. We cannot use the same syntax we did for the Survey Form since that was an image and this is not*/
+            right: 0; /*positions the id="nav-bar" to the right*/
+        }
+
+            #nav-bar a:hover {
+                background-color: gray;
+                color: black;
+                transform: scale(1.3); /*This will make it so that if the user hovers over the nav-bar options, then they will increase in size. Not that you need the display: flex if you want to use transform: scale*/
+            }
+
+        .nav-link {
+            color: white;
+            font-size: 100%;
+        }
+
+        #header-img {
+            display: block;
+            margin: auto; /*these two lines helps to center the image*/
+        }
+
+        #home {
+            text-align: center;
+        }
+
+        #about {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #subscribe {
+            text-align: center;
+            background-color: gray;
+        }
+
+        #books {
+            width: 15%;
+        }
+
+        #films {
+            width: 15%;
+        }
+
+        #video {
+            display: block;
+            margin: auto;
+            width: 50%;
+        }
+
+        @media(max-width: 350px) {
+            #video {
+                width: 70%;
+                height: auto;
+            }
+
+            h2 {
+                font-size: 15px;
+            }
+
+            p {
+                font-size: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav id="nav-bar">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#subscribe" class="nav-link">Subscribe</a>
+            <a href="#about" class="nav-link">About</a><!-- The # symbol is required if you want those anchor links to actually take you to a different part of the page-->
+        </nav>
+        <img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0017/6672/brand.gif?itok=lG33X-_2" id="header-img"></img>
+
+    </header>
+    <main>
+        <section id="home">
+            <h2>Featured Books</h2>
+            <hr>
+            <a href="https://www.amazon.com/gp/product/4048665308/ref=dbs_a_def_rwt_bibl_vppi_i3" target="_blank"><img id="books" src="https://images-na.ssl-images-amazon.com/images/I/51I1LxUxfBL._SX348_BO1,204,203,200_.jpg" alt="Bokura Wa Maho Shojo No Naka"></a>
+            <a href="https://www.amazon.com/gp/product/4048915304/ref=dbs_a_def_rwt_bibl_vppi_i5" target="_blank"><img id="books" src="https://images-na.ssl-images-amazon.com/images/I/616ZAuCmx1L._SX347_BO1,204,203,200_.jpg" alt="Triumph of genius Fallen"></a>
+            <a href="https://www.amazon.com/gp/product/4048674617/ref=dbs_a_def_rwt_bibl_vppi_i1" target="_blank"><img id="books" src="https://images-na.ssl-images-amazon.com/images/I/51p-JgdXvtL._SX298_BO1,204,203,200_.jpg" alt="Utsuro No Hako To Zero No Maria"></a>
+            <a href="https://www.amazon.com/gp/product/4062940965/ref=dbs_a_def_rwt_bibl_vppi_i11" target="_blank"><img id="books" src="https://images-na.ssl-images-amazon.com/images/I/51B8fwaQzPL._SX352_BO1,204,203,200_.jpg" alt="Masquerade and the Nameless Women"></a>
+            <a href="https://www.amazon.com/Fate-Zero-1-Gen-Urobuchi/dp/1616559195/ref=sr_1_2?crid=2KVEVKX614DOJ&dchild=1&keywords=fate+zero&qid=1603616490&s=books&sprefix=fate+zero%2Cstripbooks%2C185&sr=1-2" target="_blank"><img id="books" src="https://images-na.ssl-images-amazon.com/images/I/51UqkQDJl4L._SX352_BO1,204,203,200_.jpg" alt="Fate/Zero"></a>
+            <h2>Featured Films</h2>
+            <hr>
+            <a href="https://www.amazon.com/Silent-Voice-English-Language-Version/dp/B08DRR9BCB/ref=sr_1_8?dchild=1&keywords=koe+no+katachi&qid=1603617276&sr=8-8" target="_blank">
+                <img id="films" src="https://images-na.ssl-images-amazon.com/images/I/81fp8wUrHuL._SX300_.jpg" alt="A Silent Voice"><a />
+                <a href="https://www.amazon.com/Gintama-The-Movie-2/dp/B01MQH2DX7/ref=sr_1_18?dchild=1&keywords=gintama&qid=1603617628&s=movies-tv&sr=1-18" target="_blank"><img id="films" src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/GintamaFinalChapterposter.jpg/220px-GintamaFinalChapterposter.jpg" alt="Gintama Movie 2"></a>
+                <a href="https://www.amazon.com/want-eat-your-pancreas-Blu-ray/dp/B07Z8B88Z8/ref=sr_1_2?crid=2XBLSCCO4S30C&dchild=1&keywords=i+want+to+eat+your+pancreas&qid=1603617983&s=movies-tv&sprefix=i+want+to+ea%2Cmovies-tv%2C184&sr=1-2" target="_blank"><img id="films" src="https://pics.filmaffinity.com/I_Want_to_Eat_Your_Pancreas-973094518-large.jpg" alt="I Want To Eat Your Pancreas"></a>
+                <a href="https://www.amazon.com/Non-Biyori-Vacation-Blu-ray/dp/B0863TX147/ref=sr_1_1?crid=HMC3S5ZKYYMS&dchild=1&keywords=non+non+biyori+vacation&qid=1603618377&s=movies-tv&sprefix=non+non+biyori+vaca%2Cmovies-tv%2C189&sr=1-1" target="_blank"><img id="films" src="https://m.media-amazon.com/images/M/MV5BOWVjYTU5ZmItMjI1NS00M2VjLWFkYzAtMjY3NjExZjdmMzBmXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_.jpg" alt="Non Non Biyori Vacation"></a>
+                <a href="https://www.amazon.com/Love-Chunibyo-Other-Delutions-Blu-ray/dp/B07FSVYSG7/ref=sr_1_6?dchild=1&keywords=chuunibyou&qid=1603618516&s=movies-tv&sr=1-6" target="_blank"><img id="films" src="https://upload.wikimedia.org/wikipedia/en/4/4c/Love%2C_Chunibyo_%26_Other_Delusions%21_Take_on_Me_promotional_art.jpg" alt="Chuunibyou Take On Me"></a><!-- the <a target="_blank"> will allow the user to click on the link and it will automatically open up as a new tab-->
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <hr><!-- <hr> adds a horizontal line. This helps to seperate the subject and the explanation-->
+            <p>Founded in 1997 by entrepreneur and filmmaker Stu Levy, TOKYOPOP, part of POP Media Holdings, established the market for manga in North America, introducing the term to the English language in the process.</p>
+            <p>Over its history, TOKYOPOP has published thousands of books, distributed anime and Asian films on home video and television, licensed merchandise to consumer goods companies, created graphic novels of major brands and led the way digitally in social media, e-commerce and user-generated content.</p>
+            <p>TOKYOPOP’s brand expanded internationally with a network of over 160 partners in more than 50 countries and 30 languages. Its production arm has produced live-action and animated film and television content based on its extensive intellectual property library, including Priest, America’s Greatest Otaku, Van Von Hunter, Riding Shotgun, and a slate of projects currently in development.</p>
+            <hr>
+        </section>
+        <iframe id="video" width="1080" height="350" src="https://www.youtube.com/embed/QymdZSNFLK8">
+        </iframe>
+        <section id="subscribe">
+            <form id="form" action=" https://www.freecodecamp.com/email-submit">
+                <p>Please enter your email address here if you would like to join the community</p>
+                <label id="email-label" for="email">
+                    Email
+                    <input id="email" type="email" placeholder="example@gmail.com" name="email" required><!-- Since the input type="email" and is required, this means that the user has to enter an email in an email format and must enter in the field; otherwise it will not proceed. Also if you're using input type="submit" instead of button type="submit", then you must have name="email" for <input id="email" type="email"; otherwise it will not work. If you have button type"submit", then having name="email" is not necessary in the <input id="email" type="email". -->
+                </label>
+                <input id="submit" type="submit">
+            </form><!-- The form element allows you to submit data to a server-->
+        </section>
+
+    </main>
+
+</body>
+</html>
